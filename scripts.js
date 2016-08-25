@@ -7,6 +7,8 @@ function onBodyLoad() {
         minSize: 1,
         cursor: 'col-resize'
     });
+
+    generateLineNumbers('ln', 200);
 }
 
 function addToolbar() {
@@ -43,4 +45,26 @@ function showDocumentOutline() {
 }
 
 function showNamespaceExplorer() {
+}
+
+function generateLineNumbers(id, count) {
+    if (count == 0) {
+        return;
+    }
+
+    var list = [];
+    for (var i = 1; i <= count; i++) {
+        var line =
+            "<a id=\"l" +
+            i +
+            "\" href=\"" +
+            "/#" + 
+            i +
+            "\">" + i + "</a><br>";
+        list.push(line);
+    }
+
+    var text = list.join("");
+
+    document.getElementById(id).innerHTML = text;
 }
