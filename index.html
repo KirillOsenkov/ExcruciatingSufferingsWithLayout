@@ -1,6 +1,42 @@
+<!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Experiments</title>
+    <link href="styles.css" rel="stylesheet" />
+    <script src="split.js"></script>
+    <script src="scripts.js"></script>
 </head>
 <body>
+    <div class="header">
+        <span id="searchBoxAndImages">
+            <img id="dotnetLogo" src="content/images/dotnet.png" width="38" height="38" />
+            <input type="text"
+                   name="name"
+                   maxlength="260"
+                   id="search-box"
+                   value=""
+                   tabindex="1" />
+            <a id="logoText" href="/">Logo</a>
+            <span id="headerMenu">
+                <a id="feedbackButtonLink">Feedback</a>
+                <a id="helpButtonLink" href="/overview/">Help</a>
+            </span>
+        </span>
+    </div>
+
+    <div id="main">
+        <div id="leftPane">
+            <div class="note">
+                Enter a type or member name.
+            </div>
+        </div>
+
+        <div id="rightPane">
+        </div>
+    </div>
+
 </body>
 </html>
